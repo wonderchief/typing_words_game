@@ -73,20 +73,36 @@ class _TypingGamePageState extends State<TypingGamePage>
     with SingleTickerProviderStateMixin {
   static const int _maxHp = 100;
   static const int _hpPenalty = 10;
-  static const int _maxActiveWords = 7;
-  static const Duration _spawnInterval = Duration(seconds: 1);
+  static const int _maxActiveWords = 5;
+  static const Duration _spawnInterval = Duration(seconds: 2);
   static const double _redLineOffset = 50;
 
   final List<GameLevel> _levels = const [
     GameLevel(
       level: 1,
-      fallDuration: Duration(seconds: 10),
+      fallDuration: Duration(seconds: 15),
       words: level1Words,
     ),
-    GameLevel(level: 2, fallDuration: Duration(seconds: 9), words: level2Words),
-    GameLevel(level: 3, fallDuration: Duration(seconds: 8), words: level3Words),
-    GameLevel(level: 4, fallDuration: Duration(seconds: 7), words: level4Words),
-    GameLevel(level: 5, fallDuration: Duration(seconds: 7), words: level5Words),
+    GameLevel(
+      level: 2,
+      fallDuration: Duration(seconds: 14),
+      words: level2Words,
+    ),
+    GameLevel(
+      level: 3,
+      fallDuration: Duration(seconds: 13),
+      words: level3Words,
+    ),
+    GameLevel(
+      level: 4,
+      fallDuration: Duration(seconds: 12),
+      words: level4Words,
+    ),
+    GameLevel(
+      level: 5,
+      fallDuration: Duration(seconds: 11),
+      words: level5Words,
+    ),
   ];
 
   final List<ActiveWord> _activeWords = [];
