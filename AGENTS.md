@@ -1,0 +1,1 @@
+It's a typing game for kids built with flutter.
